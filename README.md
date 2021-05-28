@@ -1,4 +1,4 @@
-**proyecto-andrea-eichenberger-mercado-liebre**
+**proyecto-andreaeichenberger-ml**
 
 *Simulación de la página de Mercado Libre para llevar a la práctica conceptos sobre anatomía de un sitio web.*
 
