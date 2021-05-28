@@ -20,39 +20,42 @@
     <!-- Vinculación al CSS con normalize -->
     <link rel="stylesheet" href="/css/normalize.css" />
     <!-- Configuración para que registre el ancho del dispositivo -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
   </head>
 
   <body>
-
     <!-- HEADER -->
     <header class="header">
       <div class="content">
-        <!------------ Logo ------------>
-        <img class="content__logo"
-          src="/img/logo-mercado-liebre.svg"
-          alt="Logo de Mercado Liebre"
-        />
+        <a class="content__logo" href="/"
+          ><img
+            src="/img/logo-mercado-liebre.svg"
+            alt="Logo de Mercado Liebre"
+          />
+        </a>
 
-        <!------------ Barra de búsqueda ------------>
         <form class="content__buscador" action="/" method="GET">
           <input
             class="content__buscador__input"
             type="search"
             placeholder="Buscar productos, marcas"
           />
-          <button class="content__buscador__button" ><i class="fas fa-search"></i></button>
+          <button class="content__buscador__button">
+            <i class="fas fa-search"></i>
+          </button>
         </form>
         <p class="content__copy">
           <i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta
           de crédito
         </p>
-        <!------------ Navegadores ------------>
+
         <nav class="nav">
           <ul class="nav__list nav__list--left">
             <li class="li"><a class="list__link" href="">Ofertas</a></li>
-            <li class="li"><a class="list__link" href="">Tiendas Oficiales</a></li>
+            <li class="li">
+              <a class="list__link" href="">Tiendas Oficiales</a>
+            </li>
             <li class="li"><a class="list__link" href="">Vender</a></li>
             <li class="li"><a class="list__link" href="">Ayuda</a></li>
           </ul>
@@ -63,15 +66,18 @@
               ></a>
             </li>
             <li class="li">
-              <a class="list__link" href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+              <a class="list__link" href="/login"
+                >Ingresá <i class="fas fa-sign-in-alt"></i
+              ></a>
             </li>
             <li class="li">
-              <a class="list__link" href="">Mis compras <i class="fas fa-shopping-basket"></i></a>
+              <a class="list__link" href=""
+                >Mis compras <i class="fas fa-shopping-basket"></i
+              ></a>
             </li>
           </ul>
         </nav>
       </div>
-      <!------------Menú hamburguesa------------>
       <div class="burgerMenu">
         <i class="fas fa-bars"></i>
       </div>
@@ -80,57 +86,71 @@
     <!-- MAIN -->
     <main class="main">
       <h1 class="main__h1">Ingresá</h1>
-      <form class="main__form" action="/" method="POST" enctype="multipart/form-data">
+      <form
+        class="main__form"
+        action="/"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <fieldset class="fieldset">
-          <label class="fieldset__label" for="nombreDeUsuario">Nombre de usuario:</label>
-          <input class="fieldset__input"
+          <label class="fieldset__label" for="nombreDeUsuario"
+            >Nombre de usuario:</label
+          >
+          <input
+            class="fieldset__input"
             type="text"
             name="nombreDeUsuario"
-            id="nombreDeUsuario" minlength="4"
+            id="nombreDeUsuario"
+            minlength="4"
             required
           />
         </fieldset>
 
         <fieldset class="fieldset">
           <label class="fieldset__label" for="password">Contraseña:</label>
-          <input class="fieldset__input" type="password" name="password" id="password" required/>
+          <input
+            class="fieldset__input"
+            type="password"
+            name="password"
+            id="password"
+            required
+          />
         </fieldset>
 
         <div class="boxButton">
-        <button class="boxButton__button" type="submit">Enviar</button>
-      </div>
+          <button class="boxButton__button" type="submit">Enviar</button>
+        </div>
       </form>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <section id="footer-inicial">
-        <i class="fas fa-credit-card"></i>
-        <h4>Pagá con tarjeta o en efectivo</h4>
-        <p>
+      <section class="footer__section footer__section-inicial">
+        <i class="footer__section__icon fas fa-credit-card"></i>
+        <h4 class="footer__section__h4">Pagá con tarjeta o en efectivo</h4>
+        <p class="footer__section__p">
           Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
           efectivo en puntos de pago. ¡Y siempre es seguro!
         </p>
       </section>
-      <section>
-        <i class="fas fa-gift"></i>
-        <h4>Envío gratis desde $ 2.500</h4>
-        <p>
+      <section class="footer__section">
+        <i class="footer__section__icon fas fa-gift"></i>
+        <h4 class="footer__section__h4">Envío gratis desde $ 2.500</h4>
+        <p class="footer__section__p">
           Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
           miles de productos. Es un beneficio de Mercado Puntos.
         </p>
       </section>
-      <section id="footer-final">
-        <i class="fas fa-user-shield"></i>
-        <h4>Seguridad, de principio a fin</h4>
-        <p>
+      <section class="footer__section footer__section-final">
+        <i class="footer__section__icon fas fa-user-shield"></i>
+        <h4 class="footer__section__h4">Seguridad, de principio a fin</h4>
+        <p class="footer__section__p">
           ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas
           hacer, porque estás siempre protegid@.
         </p>
       </section>
-      <section class="copyright">
-        <h6>Copyright © 1999-2020 MercadoLiebre S.R.L.</h6>
-      </section>
+      <h6 class="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</h6>
     </footer>
+    
   </body>
 </html>
