@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Vinculación al CSS con estilos -->
+    <link rel="stylesheet" href="/css/register.css" />
+    <!-- Vinculación al CSS con normalize -->
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <!-- Configuración para que registre el ancho del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="content">
+        <!------------ Logo ------------>
+        <img class="content__logo"
+          src="/img/logo-mercado-liebre.svg"
+          alt="Logo de Mercado Liebre"
+        />
+
+        <!------------ Barra de búsqueda ------------>
+        <form class="content__buscador" action="/" method="GET">
+          <input
+            class="content__buscador__input"
+            type="search"
+            placeholder="Buscar productos, marcas"
+          />
+          <button class="content__buscador__button" ><i class="fas fa-search"></i></button>
+        </form>
+        <p class="content__copy">
+          <i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta
+          de crédito
+        </p>
+        <!------------ Navegadores ------------>
+        <nav class="nav">
+          <ul class="nav__list nav__list--left">
+            <li class="li"><a class="list__link" href="">Ofertas</a></li>
+            <li class="li"><a class="list__link" href="">Tiendas Oficiales</a></li>
+            <li class="li"><a class="list__link" href="">Vender</a></li>
+            <li class="li"><a class="list__link" href="">Ayuda</a></li>
+          </ul>
+          <ul class="nav__list nav__list--right">
+            <li class="li">
+              <a class="list__link" href="/register"
+                >Creá tu cuenta <i class="far fa-address-card"></i
+              ></a>
+            </li>
+            <li class="li">
+              <a class="list__link" href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+            </li>
+            <li class="li">
+              <a class="list__link" href="">Mis compras <i class="fas fa-shopping-basket"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!------------Menú hamburguesa------------>
+      <div class="burgerMenu">
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <h1 class="main__h1">Creá tu cuenta</h1>
+
+      <form
+        class="main__form"
+        action="/dataUsers"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+
+        <fieldset class="fieldset">
+          <label class="fieldset__label" for="nombreApellido"
+            >Nombre y apellido:</label
+          >
+          <input
+            class="fieldset__input"
+            type="text"
+            name="nombreApellido"
+            id="nombreApellido"
+            minlength="4"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="fieldset__label" for="nombreUsuario"
+            >Nombre de usuario:</label
+          >
+          <input
+            class="fieldset__input"
+            type="text"
+            name="nombreUsuario"
+            id="nombreUsuario"
+            minlength="4"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="fieldset__label" for="fechaDeNacimiento"
+            >Fecha de nacimiento:</label
+          >
+          <input
+            class="fieldset__input"
+            type="date"
+            name="fechaDeNacimiento"
+            id="fechaDeNacimiento"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="fieldset__label" for="domicilio">Domicilio:</label>
+          <input
+            class="fieldset__input"
+            type="text"
+            name="domicilio"
+            id="domicilio"
+            required
+          />
+        </fieldset>
+
+        <!--Caso: Profile RadioButton-->
+        <fieldset class="fieldset">
+          <label class="fieldset__label">Perfil de usuario:</label>
+
+          <div class="box-profile">
+            <label class="box-profile__label" for="vendedor">
+              <input
+                class="box-profile__label__input"
+                type="radio"
+                name="perfilDeUsuario"
+                id="vendedor"
+                value="vendedor"
+              />Vendedor</label>
+
+            <label class="box-profile__label" for="comprador"
+              ><input
+                class="box-profile__label__input"
+                type="radio"
+                name="perfilDeUsuario"
+                id="comprador"
+                value="comprador"
+                checked
+              />Comprador</label
+            >
+          </div>
+        </fieldset>
+
+        <!--Caso: Interest Checkbox-->
+        <fieldset class="fieldset">
+          <label class="fieldset__label">Categorías de interés:</label>
+
+          <div class="box-interest">
+          <label class="box-interest__label" for="electro">Electro<input
+            class="box-interest__label__input"
+            type="checkbox"
+            name="interes"
+            id="electro"
+            value="electro"
+          /></label>
+
+          <label class="box-interest__label" for="moda">Moda<input
+            class="box-interest__label__input"
+            type="checkbox"
+            name="interes"
+            id="moda"
+            value="moda"
+          /></label>
+        
+          <label class="box-interest__label" for="hogar">Hogar<input
+            class="box-interest__label__input"
+            type="checkbox"
+            name="interes"
+            id="hogar"
+            value="hogar"
+          /></label>
+          
+          <label class="box-interest__label" for="jugueteria"
+            >Juguetería<input
+            class="box-interest__label__input"
+            type="checkbox"
+            name="interes"
+            id="jugueteria"
+            value="jugueteria"
+          /></label>
+    
+          <label class="box-interest__label" for="vidaSana"
+            >Vida sana<input
+            class="box-interest__label__input"
+            type="checkbox"
+            name="interes"
+            id="vidaSana"
+            value="vidaSana"
+          /></label>
+        </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="fieldset__label" for="fotoDeUsuario"
+            >Foto de usuario:</label
+          >
+          <input
+            class="fieldset__input"
+            type="file"
+            name="fotoDeUsuario"
+            id="fotoDeUsuario"
+            accept=".jpg, .png"
+          />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="fieldset__label" for="password"
+            >Creá tu contraseña:</label
+          >
+          <input
+            class="fieldset__input"
+            type="password"
+            name="password"
+            id="password"
+            required
+          />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="fieldset__label" for="confirmPassword"
+            >Confirmá tu contraseña:</label
+          >
+          <input
+            class="fieldset__input"
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            required
+          />
+        </fieldset>
+
+        <div class="boxButtons">
+        <button class="boxButtons__button boxButtons__button--reset" type="reset">Borrar</button>
+        <button class="boxButtons__button boxButtons__button--submit" type="submit">Enviar</button>
+      </div>
+      </form>
+    </main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <section id="footer-inicial">
+    <i class="fas fa-credit-card"></i>
+    <h4>Pagá con tarjeta o en efectivo</h4>
+    <p>
+      Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o
+      efectivo en puntos de pago. ¡Y siempre es seguro!
+    </p>
+  </section>
+  <section>
+    <i class="fas fa-gift"></i>
+    <h4>Envío gratis desde $ 2.500</h4>
+    <p>
+      Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en
+      miles de productos. Es un beneficio de Mercado Puntos.
+    </p>
+  </section>
+  <section id="footer-final">
+    <i class="fas fa-user-shield"></i>
+    <h4>Seguridad, de principio a fin</h4>
+    <p>
+      ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas
+      hacer, porque estás siempre protegid@.
+    </p>
+  </section>
+  <section class="copyright">
+    <h6>Copyright © 1999-2020 MercadoLiebre S.R.L.</h6>
+  </section>
+</footer>
+  </body>
+</html>
