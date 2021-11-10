@@ -1,10 +1,10 @@
 **proyecto-andreaeichenberger-ml**
 
-*Simulación de la página de Mercado Libre para llevar a la práctica conceptos sobre anatomía de un sitio web.*
+*Simulation of the Mercado Libre page to put anatomy concepts into practice on a website.*
 
 ------------
 
 
-Durante la realización del curso de Fullstack Developer nos proponen realizar una página similar a la de Mercado Libre, empresa argentina dedicada al comercio electrónico, para poner a prueba lo aprendido sobre "Anatomía de sitios web" utilizando HTML, CSS y JS.
+During the Fullstack Developer course we are proposed to create a page similar to Mercado Libre, an Argentine company dedicated to electronic commerce, to test what we have learned about "Anatomy of websites" using HTML, CSS and JS.
 
-Es nuestra primera experiencia de estas características, por lo que se trabaja sobre la maquetación y estilos de la página y no en el desarrollo del back-end.
+It is our first experience of these characteristics, so we work on the layout and styles of the page and not on the development of the back-end.
